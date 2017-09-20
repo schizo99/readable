@@ -14,16 +14,16 @@ class App extends Component {
         <Route exact path="/" render={() => (
           <Posts />
         )}/>
-        <Route path="/category/:category" render={(props) => (
+        <Route exact path="/:category" render={(props) => (
           <Posts category={props.match.params.category}/>
         )}/>
-        <Route path="/posts/:postid" render={(props) => (
+        <Route exact path="/:category/:postid" render={(props) => (
           <PostDetail postid={props.match.params.postid}/>
         )}/>
-        <Route path="/add/comment/:parentId" render={(props) => (
+        <Route exact path="/add/comment/:parentId" render={(props) => (
           <AddComment {...props} parentId={props.match.params.parentId}></AddComment>
         )}/>        
-         <Route path="/add/post/:category?" render={(props) => (
+         <Route exact path="/add/post/:category?" render={(props) => (
           <AddPost {...props} category={props.match.params.category}/>
         )}/>
       </div>

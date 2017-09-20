@@ -12,7 +12,7 @@ class Navigation extends Component {
         <ol>
           {
             categories.length > 0
-            ? categories.map((category) => { return <li key={category.name}><Link to={{pathname: `/category/${category.path}`}}>{category.name}</Link></li> })
+            ? categories.map((category) => { return <li key={category.name}><Link to={{pathname: `/${category.path}/`}}>{category.name}</Link></li> })
             : null
           }
         </ol>

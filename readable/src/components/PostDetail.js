@@ -38,6 +38,7 @@ class PostDetail extends Component {
                             .map((comment) => {
                               if (!comment.deleted)
                                 return <Comment key={comment.id} comment={comment}/>
+                              return null
                           })}
                         </ol>
                         <div className="add-post" >

@@ -23,7 +23,6 @@ class Comment extends Component {
     this.closeEditCommentModal(id)
   }
   render() {
-    const {editCommentModalOpen} = this.props.modal
     const comment = this.props.comments[this.props.comment.parentId].filter(c => c.id === this.props.comment.id)[0]
     return (
       <div className="comment-container">

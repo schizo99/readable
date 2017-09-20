@@ -37,7 +37,7 @@ class Post extends Component {
             <div className="post-title">{post.title} - {post.category}</div>
             <div className="post-body">{post.body}</div>
             <div className="post-footer">{post.voteScore} points by {post.author} submitted @ <Moment format="YYYY-MM-DD HH:mm">{post.timestamp}</Moment></div>
-            <Link to={{ pathname: "/posts/" + post.id }}>
+            <Link to={{ pathname: "/" + post.category + "/" + post.id }}>
             <div className="post-comments">comments ({numberOfComments - deletedComments})</div>
             </Link>
             {(this.props.detail) ? <div><Button onClick={() => this.openEditPostModal(post.id)} bsSize="xsmall">edit</Button><Button onClick={() => this.props.deletePost(post.id, 'posts')} bsSize="xsmall">delete</Button></div> : null}

@@ -29,12 +29,13 @@ class Posts extends Component {
                   } else {
                     return -1
                   }
-                  
+                  return null
                 })
                 .sort(sortBy(this.props.sort.sortOrder + this.props.sort.sortCategory))
                 .map((post) => {
                   if (!post.deleted)
                     return <Post key={post.id} post={post}/>
+                  return null
                 })
               }
             </ol>
